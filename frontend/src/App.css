@@ -1,0 +1,6 @@
+@import './simple-student-style.css';
+
+/* Additional tweaks if needed */
+.app-container {
+  padding: 20px;
+}

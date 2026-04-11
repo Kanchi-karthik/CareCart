@@ -1,0 +1,2 @@
+Table	Create Table
+orders	CREATE TABLE `orders` (\n  `ORDER_ID` varchar(50) NOT NULL,\n  `BUYER_ID` varchar(50) NOT NULL,\n  `GRAND_TOTAL` decimal(15,2) NOT NULL,\n  `STATUS` varchar(20) DEFAULT 'PENDING',\n  `SHIPPING_ADDRESS` varchar(500) DEFAULT NULL,\n  PRIMARY KEY (`ORDER_ID`),\n  KEY `BUYER_ID` (`BUYER_ID`),\n  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`BUYER_ID`) REFERENCES `buyers` (`BUYER_ID`) ON DELETE CASCADE\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

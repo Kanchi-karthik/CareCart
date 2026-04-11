@@ -1,0 +1,6 @@
+name,manufacturer,composition,category,retail_price,wholesale_price,min_wholesale_qty,quantity,min_quantity,description
+Amoxicillin 500mg,PharmaCorp,Amoxicillin,Pharmaceuticals,15.00,10.00,50,1000,100,Antibiotic for bacterial infections
+Ibuprofen 400mg,MediLife,Ibuprofen,Pharmaceuticals,8.50,4.50,100,5000,200,Pain relief and anti-inflammatory
+Surgical Masks (Box 50),ProtectGear,Non-woven Fabric,Surgicals,12.00,6.00,20,500,50,Disposable 3-ply surgical masks
+Vitamin C 1000mg,HealthPlus,Ascorbic Acid,Supplements,20.00,12.00,30,800,100,Immunity booster multivitamins
+Paracetamol 650mg,PharmaCorp,Acetaminophen,Pharmaceuticals,5.00,2.50,200,10000,500,Fever reducer and pain reliever

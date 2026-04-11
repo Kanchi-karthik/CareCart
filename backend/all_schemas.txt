@@ -1,0 +1,74 @@
+Field	Type	Null	Key	Default	Extra
+USER_ID	varchar(50)	NO	PRI	NULL	
+USERNAME	varchar(100)	NO	UNI	NULL	
+EMAIL	varchar(100)	NO	UNI	NULL	
+PASSWORD	varchar(100)	NO		NULL	
+ROLE	enum('ADMIN','BUYER','SELLER')	NO		NULL	
+STATUS	varchar(20)	YES		ACTIVE	
+Field	Type	Null	Key	Default	Extra
+BUYER_ID	varchar(50)	NO	PRI	NULL	
+USER_ID	varchar(50)	NO	MUL	NULL	
+NAME	varchar(200)	NO		NULL	
+EMAIL	varchar(100)	YES		NULL	
+PHONE	varchar(20)	YES		NULL	
+LICENSE_NO	varchar(50)	YES		REG-PENDING	
+ADDRESS	varchar(500)	YES		NULL	
+CITY	varchar(100)	YES		NULL	
+COUNTRY	varchar(100)	YES		India	
+WALLET_BALANCE	decimal(15,2)	YES		0.00	
+VERIFICATION_STATUS	varchar(20)	YES		VERIFIED	
+Field	Type	Null	Key	Default	Extra
+SELLER_ID	varchar(50)	NO	PRI	NULL	
+USER_ID	varchar(50)	NO	MUL	NULL	
+NAME	varchar(200)	NO		NULL	
+EMAIL	varchar(100)	YES		NULL	
+REGISTRATION_NO	varchar(100)	YES		NULL	
+PHONE	varchar(20)	YES		NULL	
+ADDRESS	varchar(500)	YES		NULL	
+CITY	varchar(100)	YES		NULL	
+BUSINESS_TYPE	varchar(50)	YES		NULL	
+VERIFICATION_STATUS	varchar(20)	YES		PENDING	
+COUNTRY	varchar(50)	YES		India	
+Field	Type	Null	Key	Default	Extra
+PRODUCT_ID	varchar(50)	NO	PRI	NULL	
+SELLER_ID	varchar(50)	NO	MUL	NULL	
+NAME	varchar(200)	NO		NULL	
+MANUFACTURER	varchar(200)	YES		NULL	
+COMPOSITION	varchar(500)	YES		NULL	
+CATEGORY	varchar(100)	YES		NULL	
+RETAIL_PRICE	decimal(12,2)	YES		NULL	
+SELLING_PRICE	decimal(12,2)	YES		NULL	
+WHOLESALE_PRICE	decimal(12,2)	YES		NULL	
+STOCK_QUANTITY	int	YES		0	
+MIN_QUANTITY	int	YES		10	
+MIN_WHOLESALE_QTY	int	YES		5	
+MIN_ORDER_QTY	int	YES		1	
+DESCRIPTION	text	YES		NULL	
+IMAGE_URL	varchar(1000)	YES		NULL	
+STATUS	varchar(20)	YES		ACTIVE	
+Field	Type	Null	Key	Default	Extra
+ORDER_ID	varchar(50)	NO	PRI	NULL	
+BUYER_ID	varchar(50)	NO	MUL	NULL	
+GRAND_TOTAL	decimal(15,2)	NO		NULL	
+STATUS	varchar(20)	YES		PENDING	
+SHIPPING_ADDRESS	varchar(500)	YES		NULL	
+TOTAL_AMOUNT	decimal(15,2)	YES		0.00	
+TAX_AMOUNT	decimal(15,2)	YES		0.00	
+DELIVERY_CHARGE	decimal(15,2)	YES		0.00	
+ORDER_DATE	timestamp	YES		CURRENT_TIMESTAMP	DEFAULT_GENERATED
+Field	Type	Null	Key	Default	Extra
+ITEM_ID	int	NO	PRI	NULL	auto_increment
+ORDER_ID	varchar(50)	NO	MUL	NULL	
+PRODUCT_ID	varchar(50)	NO	MUL	NULL	
+QUANTITY	int	NO		NULL	
+UNIT_PRICE	decimal(12,2)	NO		NULL	
+SUBTOTAL	decimal(15,2)	NO		NULL	
+Field	Type	Null	Key	Default	Extra
+PAYMENT_ID	varchar(50)	NO	PRI	NULL	
+ORDER_ID	varchar(50)	NO	MUL	NULL	
+AMOUNT	decimal(15,2)	NO		NULL	
+PAYMENT_METHOD	varchar(50)	YES		NULL	
+STATUS	varchar(20)	YES		SUCCESS	
+Field	Type	Null	Key	Default	Extra
+setting_key	varchar(100)	NO	PRI	NULL	
+setting_value	varchar(500)	NO		NULL	

@@ -1,0 +1,7 @@
+Field	Type	Null	Key	Default	Extra
+ITEM_ID	int	NO	PRI	NULL	auto_increment
+ORDER_ID	varchar(50)	NO	MUL	NULL	
+PRODUCT_ID	varchar(50)	NO	MUL	NULL	
+QUANTITY	int	NO		NULL	
+UNIT_PRICE	decimal(12,2)	NO		NULL	
+SUBTOTAL	decimal(15,2)	NO		NULL	
